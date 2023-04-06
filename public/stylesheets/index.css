@@ -1,12 +1,8 @@
-html {
-  height: 100%;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    height: 100%;
-    text-shadow: 2px 2px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-shadow: 2px 2px 2px black;
+  height: 100%;
   }
 
 .demo_btn {
@@ -40,11 +36,15 @@ body {
   margin: 0px 7px;
 }
 
+.wrapper {
+  height: 95vh;
+}
+
 .dropdown {
   background-color: #4CAF50;
   color: white;
   padding: 8px;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   margin: 5px 5px 5px 5px;
@@ -72,15 +72,22 @@ body {
   border:0.16em solid white;
   border-radius: 15px;
   margin:0.3em 0.3em 0.3em 1em;
-  font-size: 14px;
+  font-size: 16px;
   font-family: fantasy;
-  
 }
 
 .search_btn:hover {
   background-color: rgb(223, 96, 11);
   color: black;
   cursor: pointer;
+}
+
+#first-dropdown,
+#second-dropdown,
+#third-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #searchTitle{
@@ -90,16 +97,14 @@ body {
 
 /* Main Grid Styles */
 .grid__container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+.title-search,
 .author-search,
-.splash-image-div,
 .genre-search {
-  /* border: 1px solid #333333; */
-  width: 33.3333333333%;
   display: flex;  
   justify-content: center;
   align-items: center;
@@ -124,15 +129,15 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 1%;
-  padding-bottom: 1%;
 }
 
 .grid__item-1-1 {
-  font-size: 70px;
+  font-size: 7vw;
   font-weight: 300;
   color: white;
   text-shadow: 3px 3px black;
-  font-family: fantasy; 
+  font-family: fantasy;
+  text-align: center;
 }
 
 .grid__item-1-2 {
@@ -155,27 +160,28 @@ body {
   min-height: 7%;
   display: flex;
   justify-content:center;
+  align-items: center;
   background-image: url('/images/354755-beautiful-comic-book-background-1920x1080.jpg');
   background-position-x: center;
   background-position-y:45%;
   background-size: fill;
-}
-
-.splash-image {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /* padding-bottom: 15px; */
 }
 
 .flex-container-1 {
   display: flex;
+  justify-content: space-evenly;
 }
 
   /* Grid Section 8 News Styles */
 .grid__section-3 {
+  height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgb(243, 69, 69);
+  background-image: url("/images/PageHeader_2000x800.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Grid Section 9 Footer Styles */
@@ -186,7 +192,9 @@ body {
   background-image: url("/images/5261-READ_header_2000x800_options_orange2.png");
   color: white;
   text-align: left;
-  /* height: 100px; */
+  height: 100px;
+  /* position: fixed; */
+  padding-bottom: 10px;
 }
 
 
@@ -220,4 +228,60 @@ body {
   font-family: fantasy;
   font-size: 25px;
   text-shadow: 1px 1px 1px black;
+}
+
+#title,
+#author,
+#genre {
+  width: 22.5vw;
+}
+
+
+@media screen and (orientation: landscape) {
+  .grid__section-3 {
+    background-image: url("/images/PageHeader_2000x800.jpg");
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  
+  .grid__section-2 {
+    justify-content: space-evenly;
+    min-height: unset;
+  }
+
+  .grid__section-3 {
+    background-image: url('/images/VWqZUb.webp');
+  }
+
+  #first-dropdown,
+  #second-dropdown,
+  #third-dropdown {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .name {
+    text-align: center;
+    width: 83px;
+  }
+
+  .grid__section-4 {
+    height: 128px;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .icon :not(#github-logo) {
+    width: 5vw;
+  }
+}
+
+
+@media screen and (max-height: 660px) {
+  .grid__section-3 {
+    background-image: url("/images/wolverine-banner.jpg");
+    /* background-size: 100%; */
+  }
 }
