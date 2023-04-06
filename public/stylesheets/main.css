@@ -6,7 +6,8 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background-image: url("/images/354755-beautiful-comic-book-background-1920x1080.jpg");
+  background-image: url("/images/red-orange-black-stripes.jpg");
+  background-size: cover;
   color: white;
 }
 
