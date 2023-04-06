@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
 const { loginUser, logoutUser, requireAuth } = require('../auth');
 
 router.get('/user/register', csrfProtection, (req, res) => {
-  const user = db.User.build();
+  const user = User.build();
   if (res.locals.authenticated) {
     return res.redirect('/')
   }
@@ -51,8 +51,8 @@ router.post('/user/demo', asyncHandler(async (req, res) => {
   if (res.locals.authenticated) {
     res.redirect('/')
   }
-  const { emailAddress, password} = req.body;
-  const user = await db.User.findOne({ where: { emailAddress } });
+  const { emailAddress } = req.body;
+  const user = await User.findOne({ where: { emailAddress } });
   loginUser(req, res, user);
   res.redirect('/')
 }));
@@ -76,7 +76,7 @@ const userValidators = [
     .isEmail()
     .withMessage('Email Address is not a valid email')
     .custom((value) => {
-      return db.User.findOne({ where: { emailAddress: value } })
+      return User.findOne({ where: { emailAddress: value } })
         .then((user) => {
           if (user) {
             return Promise.reject('The provided Email Address is already in use by another account');
@@ -112,7 +112,7 @@ router.post('/user/register', csrfProtection, userValidators,
       password,
     } = req.body;
 
-    const user = db.User.build({
+    const user = User.build({
       emailAddress,
       firstName,
       lastName,
@@ -125,7 +125,7 @@ router.post('/user/register', csrfProtection, userValidators,
       user.hashedPassword = hashedPassword;
       await user.save();
       const userId = user.id
-      const shelf = db.Shelf.build({
+      const shelf = Shelf.build({
         name: 'My-shelf',
         userId: userId,
         isRecommended: false
@@ -178,7 +178,7 @@ router.post('/user/register', csrfProtection, userValidators,
 
     if (validatorErrors.isEmpty()) {
       // Attempt to get the user by their email address.
-      const user = await db.User.findOne({ where: { emailAddress } });
+      const user = await User.findOne({ where: { emailAddress } });
 
       if (user !== null) {
         // If the user exists then compare their password

@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { csrfProtection, asyncHandler } = require('./utils');
 const db = require('../db/models')
 const {User, Comic} = db
 
 /* GET home page. */
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res) => {
   const comics = await Comic.findAll();
   let titles = [];
   let authors = [];

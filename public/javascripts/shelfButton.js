@@ -7,7 +7,7 @@ shelfButton.forEach(button => {
         const shelfButtonId = e.target.id
         const body = {shelfButtonId};
     try {
-        const res = await fetch(`/user/1`, {
+        await fetch(`/user/1`, {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
@@ -32,7 +32,7 @@ removeShelfButton.forEach(button => {
         const shelfName = button.parentNode.parentNode.parentNode.id
         const body = {removeShelfButtonId, shelfName};
     try {e
-        const res = await fetch(`/user/1`, {
+        await fetch(`/user/1`, {
         method: 'DELETE',
         body: JSON.stringify(body),
         headers: {

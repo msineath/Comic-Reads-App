@@ -1,5 +1,4 @@
 let btn = document.querySelectorAll(".dropdown");
-let editBtn = document.querySelectorAll('.editBtn');
 for(let i=0; i<btn.length; i++){
 
   btn[i].addEventListener("change", async (event)=>{ // click
@@ -29,7 +28,7 @@ for(let i=0; i<btn.length; i++){
       let ans = await res.json()
 
       if(ans.post === "exists"){
-        const res = await fetch("/comics", {
+        await fetch("/comics", {
           method: 'PATCH',
           body: JSON.stringify(body),
           headers: {"Content-Type": "application/json",}

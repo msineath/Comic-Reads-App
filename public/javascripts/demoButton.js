@@ -1,11 +1,11 @@
 const demoButton= document.querySelector(".demo_btn");
 
-demoButton?.addEventListener("click", async (event)=>{
+demoButton?.addEventListener("click", async ()=>{
     const emailAddress = "demo@demo.com";
     const password = "password";
     const body = { emailAddress, password };
     try {
-    const res = await fetch(`/user/demo`, {
+    await fetch(`/user/demo`, {
         method: "POST",
         body: JSON.stringify(body),
         headers: {

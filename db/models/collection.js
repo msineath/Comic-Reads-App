@@ -6,8 +6,5 @@ module.exports = (sequelize, DataTypes) => {
     comicId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER
   }, {timestamps: false});
-  Collection.associate = function(models) {
-    // associations can be defined here
-  };
   return Collection;
 };

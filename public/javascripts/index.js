@@ -1,6 +1,4 @@
 const searchButton = document.querySelector('.search_btn');
-let searchCriteria = document.getElementById('criteria');
-let secondDropdown = document.getElementById('secondDropdown');
 let selection = document.getElementById('searchTitle');
 let title = document.getElementById('title');
 let author = document.getElementById('author');
@@ -18,7 +16,7 @@ genre.addEventListener('change', () => {
     window.location.href = `/comics/search/genre/${genre.value}`
 })
 
-searchButton.addEventListener("click", async (event)=> {
+searchButton.addEventListener("click", async ()=> {
     console.log(`searchCriteria:  selection: ${selection.value}`)
     await fetch (`/comics/search/keyword/${selection.value}`);
     window.location.href = `/comics/search/keyword/${selection.value}`

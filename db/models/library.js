@@ -4,8 +4,5 @@ module.exports = (sequelize, DataTypes) => {
     shelfId: DataTypes.INTEGER,
     comicId: DataTypes.INTEGER
   }, {});
-  Library.associate = function(models) {
-    // associations can be defined here
-  };
   return Library;
 };

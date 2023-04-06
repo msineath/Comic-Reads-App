@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: (queryInterface) => {
     return queryInterface.bulkInsert('Comics', [
       {title: 'The Sandman Overture', author: 'Neil Gaiman', genre: 'Dark Fantasy', coverUrl: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1444878181l/18310944._SY475_.jpg'},
       {title: 'The Sandman Preludes and Nocturnes', author: 'Neil Gaiman', genre: 'Dark Fantasy', coverUrl: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1411609637l/23754.jpg'},
@@ -104,27 +104,9 @@ module.exports = {
       {title: 'Hellraiser Issue 9', author: 'Clive Barker', genre: 'Horror', coverUrl: 'https://d1466nnw0ex81e.cloudfront.net/n_iv/600/628113.jpg'},
       {title: 'Hellraiser Issue 10', author: 'Clive Barker', genre: 'Horror', coverUrl: 'https://d1466nnw0ex81e.cloudfront.net/n_iv/600/629657.jpg'}
     ], {});
-
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: (queryInterface) => {
     return queryInterface.bulkDelete('Comics', null, {});
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
   }
 };

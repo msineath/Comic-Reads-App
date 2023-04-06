@@ -2,11 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 const db = require('../db/models');
-const { csrfProtection, asyncHandler } = require('./utils');
+const { asyncHandler } = require('./utils');
 const { requireAuth } = require('../auth');
-const { Comic, User, Review, Collection} = db;
-const { check, validationResult } = require('express-validator');
-const Sequelize = require('sequelize')
+const { Comic, Review, Collection} = db;
 const { Op } = require('sequelize');
 
 
@@ -24,29 +22,32 @@ const comics = await Comic.findAll();
     res.render("comics", { comics, status })
 }));
 
-router.get('/search/:searchCriteria/:selectedChoice', async (req, res, next) => {
+router.get('/search/:searchCriteria/:selectedChoice', async (req, res) => {
     const searchCriteria = req.params.searchCriteria;
     const selectedChoice = req.params.selectedChoice;
     let results;
-    
+    let titleResults;
+    let authorResults;
+    let genreResults;
     switch (searchCriteria) {
         case 'title':
-            results = await Comic.findAll({where: {title: selectedChoice}});
+            titleResults = await Comic.findAll({where: {title: selectedChoice}});
             break;
         case 'author':
-            results = await Comic.findAll({where: {author: selectedChoice}});
+            authorResults = await Comic.findAll({where: {author: selectedChoice}});
             break;
         case 'genre':
-            results = await Comic.findAll({where: {genre: selectedChoice}});
+            genreResults = await Comic.findAll({where: {genre: selectedChoice}});
             break;
         case 'keyword':
-            results = await Comic.findAll({where: {title: { [Op.iLike]: `%${selectedChoice}%`}}});
-            let results2 = await Comic.findAll({where: {author: { [Op.iLike]: `%${selectedChoice}%`}}});
-            let results3 = await Comic.findAll({where: {genre: { [Op.iLike]: `%${selectedChoice}%`}}});
-            results2.forEach(result => results.push(result));
-            results3.forEach(result => results.push(result));
+            titleResults = await Comic.findAll({where: {title: { [Op.iLike]: `%${selectedChoice}%`}}});
+            authorResults = await Comic.findAll({where: {author: { [Op.iLike]: `%${selectedChoice}%`}}});
+            genreResults = await Comic.findAll({where: {genre: { [Op.iLike]: `%${selectedChoice}%`}}});
             break;
-    }
+        }
+    if (titleResults) titleResults.forEach(result => results.push(result));
+    if (authorResults) authorResults.forEach(result => results.push(result));
+    if (genreResults) genreResults.forEach(result => results.push(result));
     res.render('results', {results});
   });
 

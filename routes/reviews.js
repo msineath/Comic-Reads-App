@@ -2,8 +2,7 @@ const express = require('express');
 const { asyncHandler } = require('./utils');
 const db = require('../db/models');
 const { requireAuth } = require('../auth');
-const { Review, User, Comic } = db;
-const { check } = require('express-validator');
+const { Review } = db;
 const router = express.Router();
 router.use(requireAuth);
 
