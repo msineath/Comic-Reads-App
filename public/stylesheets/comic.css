@@ -1,206 +1,204 @@
 img {
-    width: 75%;
-    height: 75%;
+  width: 75%;
+  height: 75%;
 }
 
 .create-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
-
 .comment-text-area {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-reviews {
-    width: 80%;
+  width: 80%;
 }
 
 .comment {
-    width: 80%;
-    height:120px;
-    background-color:rgba(248, 235, 54, 0.5);
-    font-size: 18px;
-    color: white;
-    box-shadow: 2px 2px 10px black;
-    background-color: rgba(247, 247, 247, 0.11);
-    backdrop-filter: blur(30px);
+  width: 80%;
+  height: 120px;
+  background-color: rgba(248, 235, 54, 0.5);
+  font-size: 18px;
+  color: white;
+  box-shadow: 2px 2px 10px black;
+  background-color: rgba(247, 247, 247, 0.11);
+  backdrop-filter: blur(30px);
 }
 
 .comment::placeholder {
-    font-size: 18px;
-    color: white;
+  font-size: 18px;
+  color: white;
 }
 
 #comic-frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgba(173, 10, 10, 0.24);
-    box-shadow: 2px 2px 10px black;
-    background-color: rgba(247, 247, 247, 0.11);
-    backdrop-filter: blur(30px);
-    width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(173, 10, 10, 0.24);
+  box-shadow: 2px 2px 10px black;
+  background-color: rgba(247, 247, 247, 0.11);
+  backdrop-filter: blur(30px);
+  width: 30%;
 }
 
 .submitReviewBtn {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 20%;   
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 20%;
 }
 
 .dropdown {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
 .review-body {
-    text-align: center;
-    margin-top: 3%;
-    font: unset;
-    font-style: italic;
+  text-align: center;
+  margin-top: 3%;
+  font: unset;
+  font-style: italic;
 }
 
 .review-btns {
-    display: flex;
-    justify-content: center;
-    width: 30%;
-    margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin-bottom: 3%;
 }
 
 .individual-review {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    /* background-color: rgba(204, 174, 7, 0.363); */
-    background-color: rgba(247, 247, 247, 0.11);
-    backdrop-filter: blur(30px);
-    box-shadow: 2px 2px 10px black;
-    margin-bottom: 3%;
-    overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  /* background-color: rgba(204, 174, 7, 0.363); */
+  background-color: rgba(247, 247, 247, 0.11);
+  backdrop-filter: blur(30px);
+  box-shadow: 2px 2px 10px black;
+  margin-bottom: 3%;
+  overflow-wrap: anywhere;
 }
 
 .edit-form,
 .delete-form {
-    margin-left: 3%;
-    margin-right: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .comic-title,
 .reviews-title {
-    font-size: 25px;
-    font-family: fantasy;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    margin-bottom: 16px;
+  font-size: 25px;
+  font-family: fantasy;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  margin-bottom: 16px;
 }
 
 .comic-genre {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #catalogueInfo {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 
-    height: 800px;
+  height: 800px;
 }
 
 .reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    /* background-color: rgba(173, 10, 10, 0.24); */
-    background-color: rgba(247, 247, 247, 0.11);
-    backdrop-filter: blur(30px);
-    box-shadow: 2px 2px 10px black;
-    width: 60%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  /* background-color: rgba(173, 10, 10, 0.24); */
+  background-color: rgba(247, 247, 247, 0.11);
+  backdrop-filter: blur(30px);
+  box-shadow: 2px 2px 10px black;
+  width: 60%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 p {
-    font-family: fantasy;
+  font-family: fantasy;
 }
 
 .cellButtons {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
 .dropdown {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin: 5px 5px 5px 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 
 .dropdown:hover {
-    border: 1px solid ;
-    border-color: rgb(0, 0, 0)
-  }
+  border: 1px solid;
+  border-color: rgb(0, 0, 0);
+}
 .dropdown-content {
-    position: absolute;
-    background-color: #4CAF50;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
+  position: absolute;
+  background-color: #4caf50;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
 .shelf_btn,
 .submitReviewBtn,
 .editReviewBtn,
 .deleteReviewBtn {
-    border: none;
-    background-color: rgb(0, 0, 0, 0);
-    color: white;
-    padding:0.5em 1em;
-    background-color: #4CAF50;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin:4px 0.3em 0.3em 0;
-    font-size: 16px;
-    border: 0.18em solid rgba(255, 255, 255, 0);
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  color: white;
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 4px 0.3em 0.3em 0;
+  font-size: 16px;
+  border: 0.18em solid rgba(255, 255, 255, 0);
 }
 
 .editReviewBtn,
 .deleteReviewBtn {
-    min-width: 83px;
+  min-width: 83px;
 }
 
 .submitReviewBtn {
-    min-width: 144px;
+  min-width: 144px;
 }
 
 .shelf_btn:hover,
 .submitReviewBtn:hover,
 .editReviewBtn:hover,
 .deleteReviewBtn:hover {
-    border: 0.18em solid ;
-    background-color: #4CAF50;
-    border-color: rgb(9, 255, 0);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    font-size: 16px;
+  border: 0.18em solid;
+  background-color: #4caf50;
+  border-color: rgb(9, 255, 0);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
 }

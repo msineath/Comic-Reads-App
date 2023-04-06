@@ -1,57 +1,59 @@
 html {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-    min-height: 100%;
-    min-width: 100%;
-    background-image: url('/images/354755-beautiful-comic-book-background-1920x1080.jpg');
-    color: white;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("/images/354755-beautiful-comic-book-background-1920x1080.jpg");
+  color: white;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: transparent;
-    height: 5vh;
-    text-shadow: 3px 3px 2px black;
-    text-decoration: none;
-    border-bottom: none;
-    margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  height: 5vh;
+  text-shadow: 3px 3px 2px black;
+  text-decoration: none;
+  border-bottom: none;
+  margin: auto;
 }
 
-a, .navbar-text {
-    font-size: 20px;
-    font-family: fantasy;
-    text-decoration: none;
-    border: none;
+a,
+.navbar-text {
+  font-size: 20px;
+  font-family: fantasy;
+  text-decoration: none;
+  border: none;
 }
 
-a, .navbar-text:hover {
-    border-bottom: 2px solid white;
+a,
+.navbar-text:hover {
+  border-bottom: 2px solid white;
 }
 
 .logout {
-    font-family: fantasy;
-    text-transform: uppercase;
-    font-size: 16px;
-    border:0.16em solid white;
-    background: transparent;
-    color: white;
+  font-family: fantasy;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 0.16em solid white;
+  background: transparent;
+  color: white;
 }
 
 .logout:hover {
-    background-color: crimson;
+  background-color: crimson;
 }
 
 span {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #navButtons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }

@@ -1,27 +1,27 @@
 .frame {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .comicCells {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    width: 346px;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 346px;
 }
 
 img {
-    width: 221px;
-    height: 333px;
+  width: 221px;
+  height: 333px;
 }
 
 p {
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight:900;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    height: 38px;
-    font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 38px;
+  font-size: 1.2em;
 }

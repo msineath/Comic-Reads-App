@@ -3,31 +3,31 @@ body {
   font-size: 12px;
   text-shadow: 2px 2px 2px black;
   height: 100%;
-  }
+}
 
 .demo_btn {
   background-color: rgba(255, 255, 255, 0);
-  padding:0.5em 1em;
-  border:0.16em solid #FFFFFF;
-  margin:4px 0.3em 0.3em 0;
+  padding: 0.5em 1em;
+  border: 0.16em solid #ffffff;
+  margin: 4px 0.3em 0.3em 0;
   box-sizing: border-box;
-  text-decoration:none;
-  text-transform:uppercase;
-  font-family:fantasy;
-  font-weight:400;
-  color:#FFFFFF;
-  text-align:center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: fantasy;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
   transition: all 0.15s;
 }
 
 .demo_btn:hover {
-  color:#c3c1c1;
-  border-color:#c3c1c1;
+  color: #c3c1c1;
+  border-color: #c3c1c1;
 }
 
 .demo_btn:active {
-  color:#BBBBBB;
-  border-color:#BBBBBB;
+  color: #bbbbbb;
+  border-color: #bbbbbb;
 }
 
 .favicon {
@@ -41,14 +41,14 @@ body {
 }
 
 .dropdown {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 8px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   margin: 5px 5px 5px 5px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover {
@@ -57,21 +57,21 @@ body {
 
 .dropdown-content {
   position: absolute;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
 }
 
-.search_btn{
+.search_btn {
   border: none;
   background-color: rgb(0, 0, 0, 0);
   color: white;
-  padding:0.2em 1em 0.4em;
-  border:0.16em solid white;
+  padding: 0.2em 1em 0.4em;
+  border: 0.16em solid white;
   border-radius: 15px;
-  margin:0.3em 0.3em 0.3em 1em;
+  margin: 0.3em 0.3em 0.3em 1em;
   font-size: 16px;
   font-family: fantasy;
 }
@@ -90,7 +90,7 @@ body {
   align-items: center;
 }
 
-#searchTitle{
+#searchTitle {
   width: 250px;
   height: 35px;
 }
@@ -105,7 +105,7 @@ body {
 .title-search,
 .author-search,
 .genre-search {
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -118,11 +118,10 @@ body {
   margin-right: 5px;
 }
 
-
 .grid__section-1 {
   background-image: url("/images/354755-beautiful-comic-book-background-1920x1080.jpg");
   background-position-y: 33%;
-  color: white  ;
+  color: white;
   font-size: 40px;
   display: flex;
   flex-direction: column;
@@ -159,11 +158,11 @@ body {
 .grid__section-2 {
   min-height: 7%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  background-image: url('/images/354755-beautiful-comic-book-background-1920x1080.jpg');
+  background-image: url("/images/354755-beautiful-comic-book-background-1920x1080.jpg");
   background-position-x: center;
-  background-position-y:45%;
+  background-position-y: 45%;
   background-size: fill;
   /* padding-bottom: 15px; */
 }
@@ -173,7 +172,7 @@ body {
   justify-content: space-evenly;
 }
 
-  /* Grid Section 8 News Styles */
+/* Grid Section 8 News Styles */
 .grid__section-3 {
   height: 100%;
   display: flex;
@@ -197,13 +196,12 @@ body {
   padding-bottom: 10px;
 }
 
-
 .grid__item-4-1,
 .grid__item-4-2,
 .grid__item-4-3,
 .grid__item-4-4,
 .grid__item-4-5 {
-  height: 100%; 
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,7 +234,6 @@ body {
   width: 22.5vw;
 }
 
-
 @media screen and (orientation: landscape) {
   .grid__section-3 {
     background-image: url("/images/PageHeader_2000x800.jpg");
@@ -244,14 +241,13 @@ body {
 }
 
 @media screen and (max-width: 1014px) {
-  
   .grid__section-2 {
     justify-content: space-evenly;
     min-height: unset;
   }
 
   .grid__section-3 {
-    background-image: url('/images/VWqZUb.webp');
+    background-image: url("/images/VWqZUb.webp");
   }
 
   #first-dropdown,
@@ -277,7 +273,6 @@ body {
     width: 5vw;
   }
 }
-
 
 @media screen and (max-height: 660px) {
   .grid__section-3 {

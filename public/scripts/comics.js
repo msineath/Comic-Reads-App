@@ -1,41 +1,40 @@
 let btn = document.querySelectorAll(".dropdown");
-for(let i=0; i<btn.length; i++){
-
-  btn[i].addEventListener("change", async (event)=>{ // click
-    const targetInfo =event.target.value;
-    const bookId =event.target.id;
+for (let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("change", async (event) => {
+    // click
+    const targetInfo = event.target.value;
+    const bookId = event.target.id;
     let hasRead;
     let wantsToRead;
 
-    if (targetInfo==="Want To Read"){
-      wantsToRead = true
-      hasRead = false
-    }
-    else if (targetInfo==="Has Read"){
-      wantsToRead = false
-      hasRead = true
+    if (targetInfo === "Want To Read") {
+      wantsToRead = true;
+      hasRead = false;
+    } else if (targetInfo === "Has Read") {
+      wantsToRead = false;
+      hasRead = true;
     }
 
-    const body = { targetInfo, bookId, hasRead, wantsToRead  };
+    const body = { targetInfo, bookId, hasRead, wantsToRead };
     try {
       const res = await fetch("/comics", {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(body),
         headers: {
           "Content-Type": "application/json",
-        }
+        },
       });
-      let ans = await res.json()
+      let ans = await res.json();
 
-      if(ans.post === "exists"){
+      if (ans.post === "exists") {
         await fetch("/comics", {
-          method: 'PATCH',
+          method: "PATCH",
           body: JSON.stringify(body),
-          headers: {"Content-Type": "application/json",}
+          headers: { "Content-Type": "application/json" },
         });
       }
-    } catch (e){
+    } catch (e) {
       console.log(e);
     }
-  })
+  });
 }

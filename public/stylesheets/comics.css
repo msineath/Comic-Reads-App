@@ -1,83 +1,83 @@
 #comicsGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .comicsCells {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
 }
 
 img {
-    width: 221px;
-    height: 333px;
+  width: 221px;
+  height: 333px;
 }
 
 p {
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight:900;
-    font-size: 1.2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    height: 38px;
-    text-shadow: 2px 2px 2px black;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 38px;
+  text-shadow: 2px 2px 2px black;
 }
 
 .cellButtons {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
 .dropdown:hover {
-    border: 1px solid ;
-    border-color: rgb(0, 0, 0)
+  border: 1px solid;
+  border-color: rgb(0, 0, 0);
 }
 
 .dropdown-content {
-    position: absolute;
-    background-color: #4CAF50;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
+  position: absolute;
+  background-color: #4caf50;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
 .title {
-    width: 316px;
+  width: 316px;
 }
 
 .title p {
-    text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px black;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
 .shelf_btn {
-    border: none;
-    background-color: rgb(0, 0, 0, 0);
-    color: white;
-    padding:0.5em 1em;
-    background-color: #4CAF50;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin:4px 0.3em 0.3em 0;
-    font-size: 16px;
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  color: white;
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 4px 0.3em 0.3em 0;
+  font-size: 16px;
 }
 
 .shelf_btn:hover {
-    border: 0.18em solid ;
-    background-color: #4CAF50;
-    border-color: rgb(9, 255, 0);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    font-size: 17px;
-  }
+  border: 0.18em solid;
+  background-color: #4caf50;
+  border-color: rgb(9, 255, 0);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+}
